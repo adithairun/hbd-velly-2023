@@ -1,0 +1,258 @@
+<html>
+  <meta charset="UTF-8" /><meta
+    content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5"
+    name="viewport"
+  /><meta content="IE=edge" http-equiv="X-UA-Compatible" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+ <!--  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+    rel="stylesheet"
+  /> -->
+
+  <link
+    href="font-google.css"
+    rel="stylesheet"
+  />
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script> -->
+
+  <script src="sweetalert2.all.min.js"></script>
+
+  <!-- <link
+    href="https://hanyauntukmu.likeadream.repl.co/style.css"
+    rel="stylesheet"
+    type="text/css"
+  /> -->
+
+   <link
+    href="style.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <!-- <script src="https://hanyauntukmu.likeadream.repl.co/script.js"></script> -->
+
+  <script src="animasi.js"></script>
+  <head> 
+    <title> HBD Velly :)</title>
+  </head>
+  <style>
+    body {
+      background-image: url(https://i.postimg.cc/NMLZ6Zk5/IMG-20220207-131156-010.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: bottom;
+    }
+    body::before {
+      content: "" !important;
+      color: transparent !important;
+    }
+  </style>
+  <body>
+    <div id="bodyblur">
+      <!-- <img
+        src="https://i.postimg.cc/NMLZ6Zk5/IMG-20220207-131156-010.jpg"
+        width="100%"
+        height="100%"
+      /> -->
+    </div>
+
+    <div id="Content">
+
+         <div>
+        <blockquote>
+          <p id="text"></p>
+          <p id="text2"></p>
+        </blockquote>
+      </div>
+
+      <div class="image">
+
+     
+
+        <img
+          src="bnya.jpg"
+          width="130px"
+          height="130px"
+        />
+
+        <img
+          src="6.jpg"
+          width="130px"
+          height="130px"
+        />
+
+        
+
+        <img
+          src="2.jpg"
+          width="130px"
+          height="130px"
+        />
+
+        
+
+      </div>
+
+
+
+
+       <div class="image">
+
+        
+        <img
+          src="12.jpg"
+          width="130px"
+          height="130px"
+        />
+
+
+        <img
+          src="13.jpg"
+          width="130px"
+          height="130px"
+        />
+
+        <img
+          src="10.jpg"
+          width="130px"
+          height="130px"
+        />
+
+
+      </div>
+
+      <div class="image">
+
+        
+        <img
+          src="7.jpg"
+          width="130px"
+          height="130px"
+        />
+
+
+        <img
+          src="8.jpg"
+          width="130px"
+          height="130px"
+        />
+
+        <img
+          src="9.jpg"
+          width="130px"
+          height="130px"
+        />
+
+
+      </div>
+
+
+      <div class="image">
+
+           <img
+          src="1.jpg"
+          width="130px"
+          height="130px"
+        />
+
+
+        <img
+          src="11.jpg"
+          width="130px"
+          height="130px"
+        />
+
+
+        <img
+          src="bg.jpg"
+          width="130px"
+          height="130px"
+        />
+    
+      </div>
+
+
+       
+   
+    </div>
+
+    <script type="text/javascript">
+      function play() {
+        var audio = new Audio(
+          "hbd-piano.mp3"
+        )
+        audio.play()
+      }
+
+      const swals = Swal.mixin({
+        allowOutsideClick: false,
+        cancelButtonColor: "#FF0040",
+      })
+      const swalsy = Swal.mixin({
+        confirmButtonText: "Iya",
+        allowOutsideClick: false,
+      })
+      const swalst = Swal.mixin({
+        allowOutsideClick: false,
+        showConfirmButton: false,
+        timer: 8000,
+        timerProgressBar: true,
+      })
+
+      async function mulaitanya() {
+        var { isConfirmed: tanyawal } = await swals.fire({
+          title: `HBD Velly`,
+          imageUrl: "1.jpg",
+          imageWidth: 120,
+          imageHeight: 120,
+          confirmButtonText: "Next",
+          allowOutsideClick: false,
+          showCancelButton: false,
+        })
+        if (tanyawal) {
+          play()
+          kuis()
+        }
+      }
+
+      async function kuis() {
+        await swalst.fire({
+          title: "From K Adit :)",
+          imageUrl: "2.jpg",
+          imageWidth: 120,
+          imageHeight: 120,
+        })
+        await swalst.fire({
+          title: "So besar kan...",
+          imageUrl: "3.jpg",
+          imageWidth: 120,
+          imageHeight: 120,
+        })
+        await swalst.fire({
+          title: "Tidak dapa rasa somo lulus juga :)",
+          imageUrl: "4.jpg",
+          imageWidth: 120,
+          imageHeight: 120,
+        })
+        await swalst.fire({
+          title: "Berdoa Sendiri saja aa, Nanti so mo aminkan",
+          imageUrl: "5.jpg",
+          imageWidth: 120,
+          imageHeight: 120,
+        })
+        text = "Pokoknya Yang Terbaik, "
+        emotnama = ""
+        text2 = "Buat bangga diri sendiri, orang tua dan orang2 yg sayang velly. Semangat jadi mahasiswa kedokteran. </br> Keep fighting 🔥🔥🔥"
+        showDiv()
+      }
+      mulaitanya()
+    </script>
+  </body>
+</html>
